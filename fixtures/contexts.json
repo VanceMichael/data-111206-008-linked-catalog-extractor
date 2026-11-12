@@ -1,0 +1,30 @@
+{
+  "https://contexts.example/catalog-v1": {
+    "@context": {
+      "@vocab": "https://schema.org/",
+      "item": "Product",
+      "deal": "Offer",
+      "company": "Organization",
+      "cost": "price",
+      "money": "priceCurrency",
+      "title": {
+        "@id": "name",
+        "@container": "@language"
+      },
+      "offers": {
+        "@id": "offers",
+        "@type": "@id"
+      },
+      "seller": {
+        "@id": "seller",
+        "@type": "@id"
+      }
+    }
+  },
+  "https://contexts.example/loop-a": {
+    "@context": "https://contexts.example/loop-b"
+  },
+  "https://contexts.example/loop-b": {
+    "@context": "https://contexts.example/loop-a"
+  }
+}
